@@ -1,0 +1,36 @@
+{
+  "name": "schibsted-challenge",
+  "version": "0.0.1",
+  "author": "@benbrownlol",
+  "description": "Schibsted Tech Challenge",
+  "scripts": {
+    "start": "webpack-dev-server -d --progress --colors --inline --hot --https --open --content-base bin/",
+    "build:dev": "webpack -d --display-modules --progress",
+    "build:dist": "webpack -p --display-modules --progress"
+  },
+  "license": "MIT",
+  "repository": "https://github.com/benbrownlol/schibsted-challenge",
+  "dependencies": {
+    "clean-webpack-plugin": "^0.1.10",
+    "copy-webpack-plugin": "^3.0.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "material-design-lite": "^1.2.1",
+    "webpack": "^1.13.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.11.4",
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.14.0",
+    "css-loader": "^0.25.0",
+    "eslint": "^3.4.0",
+    "eslint-config-airbnb-base": "^5.0.3",
+    "eslint-plugin-import": "^1.14.0",
+    "eslint-plugin-jasmine": "^1.8.1",
+    "file-loader": "^0.9.0",
+    "html-loader": "^0.4.3",
+    "node-sass": "^3.9.0",
+    "sass-loader": "^4.0.1",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.2"
+  }
+}

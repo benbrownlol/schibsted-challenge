@@ -1,0 +1,7 @@
+{
+  "extends": ["airbnb-base"],
+  "globals": {
+    "window": 1,
+    "document": 1
+  },
+}
