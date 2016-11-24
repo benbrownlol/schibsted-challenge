@@ -1,2 +1,2 @@
-# schibsted-challenge
+# Schibsted Challenge
 Tech Challenge from Schibsted
