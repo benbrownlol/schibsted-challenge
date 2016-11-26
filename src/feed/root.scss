@@ -1,0 +1,24 @@
+// NOTE: this isn't how I would noramlly include my third-party styles
+
+@import '../styles/normalize';
+@import '../styles/toast';
+
+@import '../styles/variables';
+@import '../styles/header';
+@import '../styles/feed';
+@import '../styles/results-filter';
+
+body {
+  background-color: #F6F4F8;
+  padding: 50px 0;
+}
+
+.load-all {
+  text-align: center;
+
+  [load-feed] {
+    color: $colour-secondary;
+    cursor: pointer;
+    display: inline-block;
+  }
+}

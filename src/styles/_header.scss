@@ -1,0 +1,35 @@
+.header {
+  background-color: white;
+  color: $colour-primary;
+  padding: 0;
+
+  &__strip {
+    height: 5px;
+    width: 100%;
+
+    &--blue,
+    &--green,
+    &--purple {
+      float: left;
+      height: 100%;
+      width: 33.33%;
+    }
+
+    &--blue {
+      background-color: $colour-tertiary;
+    }
+
+    &--green {
+      background-color: $colour-secondary
+    }
+
+    &--purple {
+      background-color: $colour-primary;
+    }
+  }
+
+  &__content {
+    padding: 10px 20px;
+    text-align: center;
+  }
+}

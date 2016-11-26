@@ -4,17 +4,46 @@
     <meta charset="utf-8">
     <title>ShakaJS</title>
     <link rel="icon" type="image/x-icon" href="img/favicon.ico">
-
-    <!-- NOTE: this isn't how I would normally include third-party libraries, this is just for speed because the webpack script isn't setup for this type of project -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://code.getmdl.io/1.2.1/material.indigo-pink.min.css">
-    <script defer src="https://code.getmdl.io/1.2.1/material.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
 
-    <button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
-      <i class="material-icons">add</i>
-    </button>
+    <div class="scroll-progress">
+    	<span class="scroll-progress--scrolled"></span>
+    </div>
+
+    <section class="grid">
+        <header class="header grid__col grid__col--2-of-3 grid__col--centered">
+          <section class="header__strip">
+            <div class="header__strip--blue"></div>
+            <div class="header__strip--green"></div>
+            <div class="header__strip--purple"></div>
+          </section>
+          <section class="header__content">
+            <h2>Your Video Feed</h2>
+          </section>
+        </header>
+        <ul class="feed grid__col grid__col--2-of-3 grid__col--centered"></ul>
+        <div class="grid__col grid__col--2-of-3 grid__col--centered load-all">
+          <p load-feed="ALL">Load All</p>
+        </div>
+    </section>
+
+    <section class="results-filter" function="filter">
+      <button class="results-filter__button">Filter</button>
+      <section class="results-filter__panel">
+        <section>
+          Filter by amount of results : <strong load-feed="10">10</strong> | <strong load-feed="25">25</strong> | <strong load-feed="50">50</strong>
+        </section>
+        <section>
+          Filter by amount of author likes: <strong filterby-likes="10">10+</strong> | <strong filterby-likes="50">50+</strong> | <strong filterby-likes="100">100+</strong>
+        </section>
+        <section>
+          Filter by video description : <input type="text" filterby-desc="input"> <button filterby-desc="apply">Apply Filter</button>
+        </section>
+        <div class="results-filter__close">✖</div>
+      </section>
+    </section>
 
     <script src="js/bundle.js"></script>
   </body>

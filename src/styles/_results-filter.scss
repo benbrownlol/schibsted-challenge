@@ -1,0 +1,72 @@
+.results-filter {
+  bottom: 10px;
+  left: 10px;
+  position: fixed;
+
+  &__button {
+    -webkit-appearance: none;
+    cursor: pointer;
+    background-color: $colour-secondary;
+    border: 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .12), 0 1px 2px rgba(0, 0, 0, .24);
+    color: white;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    transition: all .25s;
+
+    &:hover {
+      background-color: darken($colour-secondary, 5%);
+    }
+  }
+
+  &__panel {
+    $panel-height: 100px;
+
+    background-color: $colour-secondary;
+    bottom: 0;
+    height: $panel-height;
+    left: 0;
+    position: fixed;
+    transform: translateY($panel-height);
+    transition: all .25s;
+    width: 100%;
+    color: white;
+
+    &--open {
+      transform: translateY(0);
+    }
+
+    section {
+      margin: 10px;
+    }
+
+    strong {
+      cursor: pointer;
+      border-bottom: 1px solid white;
+    }
+
+    [filterby-desc="input"] {
+      background: none;
+      border: 2px solid white;
+      padding: 2px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    [filterby-desc="apply"] {
+      background: none;
+      border: 2px solid white;
+      line-height: 1;
+      padding: 3px 6px;
+    }
+  }
+
+  &__close {
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+  }
+}
